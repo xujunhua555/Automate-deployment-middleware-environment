@@ -38,4 +38,4 @@ echo ""
 fi
 chmod -R 777 /data/mysql/dev-xjh/logs
 chmod -R 777 /data/mysql/dev-xjh/data
-docker run --name dev-xjh-mysql -p 3306:3306 -v /data/mysql/dev-xjh/data:/var/lib/mysql  -v /{DIR}/../nacos/sql/nacos-mysql.sql:/usr -e MYSQL_ROOT_PASSWORD=A59eOBTpvVEo -d registry.cn-hangzhou.aliyuncs.com/xujunhua/mysql:5.7
+docker run --name dev-xjh-mysql -p 3306:3306 -v /data/mysql/dev-xjh/data:/var/lib/mysql -v /Automate-deployment-middleware-environment/nacos/sql/nacos-mysql.sql:/docker-entrypoint-initdb.d/nacos-mysql.sql -e MYSQL_ROOT_PASSWORD=A59eOBTpvVEo -d registry.cn-hangzhou.aliyuncs.com/xujunhua/mysql:5.7

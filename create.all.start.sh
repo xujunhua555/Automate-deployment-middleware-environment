@@ -49,6 +49,14 @@ sleep 3s
 
 echo "nacos         部署完成"
 
+echo "nginx         开始部署"
+echo " "
+sleep 3s
+
+. ${DIR}/nginx/create.nginx.start.sh
+
+echo "nginx         部署完成"
+
 echo "disconf         开始部署"
 echo " "
 sleep 3s
