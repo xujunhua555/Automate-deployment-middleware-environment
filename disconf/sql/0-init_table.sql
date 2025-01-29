@@ -1,6 +1,8 @@
 CREATE DATABASE IF NOT EXISTS `disconf`;
 USE `disconf`;
 
+
+
 CREATE TABLE `app` (
   `app_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '唯一的ID（没有啥意义，主键，自增长而已）',
   `name` varchar(255) NOT NULL DEFAULT '' COMMENT 'APP名(一般是产品线+服务名)',
